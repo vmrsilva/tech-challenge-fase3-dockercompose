@@ -11,7 +11,7 @@ RM: 360650
 
 [Clonar Solução Region](https://github.com/vmrsilva/tech-challenge-fase-3-region)
 
-2º Clonar esse repostório: <br/>
+2º Clonar esse repostório [tech-challenge-fase3-dockercompose]: <br/>
 
 3º Preparar os diretórios conforme o diagrama abaixo: <br/>
 
