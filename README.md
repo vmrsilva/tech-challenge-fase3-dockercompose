@@ -5,13 +5,13 @@
 Nome: Valmir Severino da Silva <br/>
 RM: 360650
 
-1º Clonar os repositórios: <br/>
+1º Clonar os repositórios; <br/>
 
 [Clonar Solução Contact](https://github.com/vmrsilva/tech-challenge-fase-3-contact)
 
 [Clonar Solução Region](https://github.com/vmrsilva/tech-challenge-fase-3-region)
 
-2º Clonar esse repostório [tech-challenge-fase3-dockercompose]: <br/>
+2º Clonar esse repostório [tech-challenge-fase3-dockercompose]; <br/>
 
 3º Preparar os diretórios conforme o diagrama abaixo: <br/>
 
