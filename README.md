@@ -5,9 +5,15 @@
 Nome: Valmir Severino da Silva <br/>
 RM: 360650
 
+1º Clonar os repositórios: <br/>
+
 [Clonar Solução Contact](https://github.com/vmrsilva/tech-challenge-fase-3-contact)
 
 [Clonar Solução Region](https://github.com/vmrsilva/tech-challenge-fase-3-region)
+
+2º Clonar esse repostório: <br/>
+
+3º Preparar os diretórios conforme o diagrama abaixo: <br/>
 
 root/ <br/>
   ├── tech-challenge-fase-3-contact/ <br/>
@@ -16,7 +22,9 @@ root/ <br/>
   ├── prometheus/<br/>
   ├── docker-compose.yml<br/>
 
-  ```bash
+4º Executar o build / up do docker-compose: <br/>  
+
+```bash
 docker-compose up --build -d
 ````
 
