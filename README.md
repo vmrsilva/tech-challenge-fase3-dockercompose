@@ -16,4 +16,11 @@ root/ <br/>
   ├── prometheus/<br/>
   ├── docker-compose.yml<br/>
 
-  
+  ```bash
+docker-compose up --build -d
+````
+
+Comando parar os containers: <br/>
+```bash
+docker-compose down
+```
