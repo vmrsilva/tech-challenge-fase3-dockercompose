@@ -10,7 +10,7 @@ RM: 360650
 [Clonar Solução Region](https://github.com/vmrsilva/tech-challenge-fase-3-region)
 
 root/ <br/>
-  ├── tech-challenge-fase-3-contact/ 
+  ├── tech-challenge-fase-3-contact/ <br/>
   ├── tech-challenge-fase-3-region/<br/> 
   ├── grafana/<br/>
   ├── prometheus/<br/>
