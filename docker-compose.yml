@@ -1,0 +1,100 @@
+services:
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourStrong!Passw0rd  # Altere para uma senha forte
+    ports:
+      - 1433:1433
+    networks:
+      - web-api-contacts
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+
+  redis:
+    image: redis:latest
+    restart: always
+    depends_on:
+      - sqlserver
+    ports:
+      - 6379:6379
+    networks:
+      - web-api-contacts
+    volumes:
+      - redis_data:/data
+
+  api-region:
+    build:
+      context: ./tech-challenge-fase-3-region
+      dockerfile: TechChallenge.Region.Api/Dockerfile
+      args:
+       version: 1
+    depends_on:
+      - redis
+    image: api-region
+    ports:
+      - 5110:8080
+    networks:
+      - web-api-contacts
+  api-contact:
+    build:
+      context: ./tech-challenge-fase-3-contact
+      dockerfile: TechChallenge.Contact.Api/Dockerfile
+      args:
+       version: 1
+    depends_on:
+      - redis
+    image: api-contacts
+    ports:
+      - 5144:8080
+    networks:
+      - web-api-contacts
+
+
+  prometheus:
+    build:
+      context: .
+      dockerfile: prometheus/Dockerfile
+      args:
+        version: 1
+    depends_on:
+      - api-region
+      - api-contact
+    image: prometheus-local
+    restart: always
+    ports:
+      - 9090:9090
+    networks:
+      - web-api-contacts
+    volumes:
+      - prometheus_data:/prometheus/data:/data
+
+  grafana:
+    build:
+      context: .
+      dockerfile: grafana/Dockerfile
+      args:
+        version: 1
+    depends_on:
+      - prometheus
+    image: grafana-local
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - web-api-contacts
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+networks:
+  web-api-contacts:
+    driver: bridge
+
+volumes:
+  redis_data:
+  grafana_data:
+  prometheus_data:
+  sqlserver_data:
