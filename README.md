@@ -22,10 +22,17 @@ root/ <br/>
   ├── prometheus/<br/>
   ├── docker-compose.yml<br/>
 
-4º Executar o build / up do docker-compose: <br/>  
+4º Executar:
+
+Executar o build do docker-compose: <br/>  
 
 ```bash
 docker-compose up --build -d
+````
+
+ou iniciar o docker-compose caso já tenha realizado o build:
+```bash
+docker-compose up -d
 ````
 
 Comando parar os containers: <br/>
