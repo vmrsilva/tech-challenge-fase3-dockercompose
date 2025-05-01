@@ -13,7 +13,7 @@ RM: 360650
 
 2º Clonar esse repostório [tech-challenge-fase3-dockercompose]; <br/>
 
-3º Preparar os diretórios conforme o diagrama abaixo: <br/>
+3º Organizar os diretórios conforme o diagrama abaixo: <br/>
 
 root/ <br/>
   ├── tech-challenge-fase-3-contact/ <br/>
