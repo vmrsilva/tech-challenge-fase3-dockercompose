@@ -199,7 +199,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "s"
         },
         "overrides": []
       },
@@ -280,7 +281,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "s"
         },
         "overrides": []
       },
@@ -377,25 +379,9 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "decmbytes"
         },
-        "overrides": [
-          {
-            "__systemRef": "hideSeriesFrom",
-            "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "Memoria RAM"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
-            },
-            "properties": []
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 11,
@@ -509,7 +495,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "%"
         },
         "overrides": []
       },
@@ -626,7 +612,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "req/s"
         },
         "overrides": []
       },
@@ -724,7 +711,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "req/s"
         },
         "overrides": []
       },
@@ -810,12 +798,12 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-2d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Tech Challange - Fase 3",
   "uid": "cek797kf9vbb4a",
-  "version": 5
+  "version": 11
 }
