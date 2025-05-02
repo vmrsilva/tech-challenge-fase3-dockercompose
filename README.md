@@ -5,7 +5,7 @@
 Nome: Valmir Severino da Silva <br/>
 RM: 360650
 
-1º Clonar os repositórios; <br/>
+1º Clonar os repositórios dos serviços: <br/>
 
 [Clonar Solução Contact](https://github.com/vmrsilva/tech-challenge-fase-3-contact)
 
@@ -36,6 +36,12 @@ docker-compose up -d
 ````
 
 Comando parar os containers: <br/>
+```bash
+docker-compose stop
+```
+
+
+Comando parar e remover os containers: <br/>
 ```bash
 docker-compose down
 ```
